@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: hsl(30, 38%, 92%);
+      }
+      .container {
+        width: 50vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px auto;
+      }
+      #perfume-heading {
+        letter-spacing: 1px;
+      }
+      .card-heading {
+        width: 90%;
+      }
+      .card-img {
+        background-color: #fff;
+        max-height: 95%;
+      }
+      .card-desc {
+        width: 90%;
+      }
+      .img {
+        height: 100%;
+        width: 100%;
+      }
+      .card-details {
+        padding: 25px;
+        background-color: #fff;
+        max-height: 95%;
+      }
+      .price-h1 {
+        display: inline-block;
+        color: hsl(158, 36%, 37%);
+        font-size: 2.5rem;
+      }
+      .small-price {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      .btn {
+        background-color: hsl(158, 36%, 37%);
+        color: white;
+        height: 40px;
+        width: 70%;
+        border: none;
+        border-radius: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      .btn img {
+        margin-right: 5px;
+      }
+      /* For Mobile size screens */
+      @media only screen and (max-width: 500px) {
+        .container {
+          width: 90vw;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          margin: 5px auto;
+        }
+        #perfume-heading {
+          letter-spacing: 0.5px;
+        }
+        .card-heading {
+          width: 95%;
+        }
+        .card-img {
+          background-color: #fff;
+          max-height: 95%;
+        }
+        .card-desc {
+          width: 95%;
+        }
+        .img {
+          height: 100%;
+          width: 100%;
+          content: url("./images/image-product-mobile.jpg");
+          /* Alternatively, you can use 'display: none;' to hide the large image and display the small image directly */
+        }
+        .card-details {
+          padding: 20px;
+          background-color: #fff;
+          max-height: 100%;
+        }
+        .price-h1 {
+          display: inline-block;
+          color: hsl(158, 36%, 37%);
+          font-size: 1.5rem;
+        }
+        .small-price {
+          display: inline-block;
+          margin-left: 7px;
+        }
+        .btn {
+          background-color: hsl(158, 36%, 37%);
+          color: white;
+          height: 30px;
+          width: 100%;
+          border: none;
+          border-radius: 10px;
+        }
+        .btn img {
+          margin-right: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-img">
+        <img
+          class="img"
+          src="./images/image-product-desktop.jpg"
+          alt="card image"
+        />
+      </div>
+
+      <div class="card-details">
+        <p id="perfume-heading">PERFUME</p>
+        <h1 class="card-heading">Gabrielle Essence Eau De Parfum</h1>
+        <p class="card-desc">
+          A floral, solar and voluptuous interpretation composed by Olivier
+          Polge, Perfumer-Creator for the House of CHANEL.
+        </p>
+        <div class="price">
+          <h1 class="price-h1">$149.99</h1>
+          <p class="small-price">$169.99</p>
+        </div>
+        <button class="btn">
+          <img src="./images/icon-cart.svg" alt="cart-icon" />
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
